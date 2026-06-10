@@ -15,7 +15,11 @@ data "aws_iam_policy_document" "restrict_ec2_types" {
       test     = "StringNotEquals"
       variable = "ec2:InstanceType"
       values = [
-        "t2.micro"
+        "t2.micro",
+        "t3.micro",
+        "t3.small",
+        "t4g.micro",
+        "t4g.small"
       ]
     }
   }
